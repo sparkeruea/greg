@@ -39,7 +39,6 @@ var state4_11 = 0;
 var state4_12 = 0;
 var state4_13 = 0;
 var state4_14 = 0;
-var state4_14 = 0;
 var state4_15 = 0;
 var state4_16 = 0;
 
@@ -56,7 +55,6 @@ var state3_10 = 0;
 var state3_11 = 0;
 var state3_12 = 0;
 var state3_13 = 0;
-var state3_14 = 0;
 var state3_14 = 0;
 var state3_15 = 0;
 var state3_16 = 0;
@@ -76,7 +74,6 @@ var state2_11 = 0;
 var state2_12 = 0;
 var state2_13 = 0;
 var state2_14 = 0;
-var state2_14 = 0;
 var state2_15 = 0;
 var state2_16 = 0;
 
@@ -93,7 +90,6 @@ var state1_10 = 0;
 var state1_11 = 0;
 var state1_12 = 0;
 var state1_13 = 0;
-var state1_14 = 0;
 var state1_14 = 0;
 var state1_15 = 0;
 var state1_16 = 0;
@@ -279,7 +275,7 @@ function numbersonly(e, decimal) {
 	
 	keychar = String.fromCharCode(key);
 	
-	if ((key==null) || (key==0) || (key==8) ||  (key==9) || (key==13) || (key==27) ) {
+	if ((key===null) || (key===0) || (key==8) ||  (key==9) || (key==13) || (key==27) ) {
 		return true;
 		}
 	
@@ -305,7 +301,7 @@ function tempoChange() {
 function soundsSelect (var2) {
 	
 	if (var2 == "img4-1") {
-		if (state4_1 == 0) {
+		if (state4_1 === 0) {
 			document.getElementById(var2).src = url+"button_75px.png";
 			state4_1 = 1;
 			oh1p = 'setTimeout( "oh1.play()", 0 )';
@@ -317,7 +313,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-2") {
-		if (state4_2 == 0) {
+		if (state4_2 === 0) {
 			document.getElementById(var2).src = url+"button_75px.png";
 			state4_2 = 1;
 			oh2p = 'setTimeout( "oh2.play()", tempo )';
@@ -329,7 +325,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-3") {
-		if (state4_3 == 0) {
+		if (state4_3 === 0) {
 			document.getElementById(var2).src = url+"button_75px.png";
 			state4_3= 1;
 			oh3p = 'setTimeout( "oh3.play()", tempo*2 )';
@@ -341,7 +337,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-4") {
-		if (state4_4 == 0) {
+		if (state4_4 === 0) {
 			document.getElementById(var2).src = url+"button_75px.png";
 			state4_4 = 1;
 			oh4p = 'setTimeout( "oh4.play()", tempo*3 )';
@@ -353,7 +349,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-5") {
-		if (state4_5 == 0) {
+		if (state4_5 === 0) {
 			document.getElementById(var2).src = url+"button_75px.png";
 			state4_5 = 1;
 			oh5p = 'setTimeout( "oh5.play()", tempo*4 )';
@@ -365,7 +361,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-6") {
-		if (state4_6 == 0) {
+		if (state4_6 === 0) {
 			document.getElementById(var2).src = url+"button_75px.png";
 			state4_6 = 1;
 			oh6p = 'setTimeout( "oh6.play()", tempo*5 )';
@@ -377,7 +373,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-7") {
-		if (state4_7 == 0) {
+		if (state4_7 === 0) {
 			document.getElementById(var2).src = url+"button_75px.png";
 			state4_7 = 1;
 			oh7p = 'setTimeout( "oh7.play()", tempo*6 )';
@@ -389,7 +385,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-8") {
-		if (state4_8 == 0) {
+		if (state4_8 === 0) {
 			document.getElementById(var2).src = url+"button_75px.png";
 			state4_8 = 1;
 			oh8p = 'setTimeout( "oh8.play()", tempo*7 )';
@@ -401,7 +397,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-9") {
-		if (state4_9 == 0) {
+		if (state4_9 === 0) {
 			document.getElementById(var2).src = url+"button_75px.png";
 			state4_9 = 1;
 			oh9p = 'setTimeout( "oh9.play()", tempo*8 )';
@@ -413,7 +409,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-10") {
-		if (state4_10 == 0) {
+		if (state4_10 === 0) {
 			document.getElementById(var2).src = url+"button_75px.png";
 			state4_10 = 1;
 			oh10p = 'setTimeout( "oh10.play()", tempo*9 )';
@@ -425,7 +421,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-11") {
-		if (state4_11 == 0) {
+		if (state4_11 === 0) {
 			document.getElementById(var2).src = url+"button_75px.png";
 			state4_11 = 1;
 			oh11p = 'setTimeout( "oh11.play()", tempo*10 )';
@@ -437,7 +433,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-12") {
-		if (state4_12 == 0) {
+		if (state4_12 === 0) {
 			document.getElementById(var2).src = url+"button_75px.png";
 			state4_12 = 1;
 			oh12p = 'setTimeout( "oh12.play()", tempo*11 )';
@@ -449,7 +445,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-13") {
-		if (state4_13 == 0) {
+		if (state4_13 === 0) {
 			document.getElementById(var2).src = url+"button_75px.png";
 			state4_13 = 1;
 			oh13p = 'setTimeout( "oh13.play()", tempo*12 )';
@@ -461,7 +457,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-14") {
-		if (state4_14 == 0) {
+		if (state4_14 === 0) {
 			document.getElementById(var2).src = url+"button_75px.png";
 			state4_14 = 1;
 			oh14p = 'setTimeout( "oh14.play()", tempo*13 )';
@@ -473,7 +469,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-15") {
-		if (state4_15 == 0) {
+		if (state4_15 === 0) {
 			document.getElementById(var2).src = url+"button_75px.png";
 			state4_15 = 1;
 			oh15p = 'setTimeout( "oh15.play()", tempo*14 )';
@@ -485,7 +481,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-16") {
-		if (state4_16 == 0) {
+		if (state4_16 === 0) {
 			document.getElementById(var2).src = url+"button_75px.png";
 			state4_16 = 1;
 			oh16p = 'setTimeout( "oh16.play()", tempo*15 )';

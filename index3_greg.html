@@ -2,28 +2,34 @@
 <html>
 <head>
 <title>TweetBeat</title>
-<!--Ambient Background Sound Script-->
 
+<!--Ambient Background Sound Script-->
 <script src="tb3.js" type="text/javascript" charset="utf-8"></script>
 <link rel="stylesheet" href="ss3.css" type="text/css" media="screen" />
 </head>
+
 <body onLoad="preloadImages()">
+
 <div id="banner">
 <h1>TweetBeat</h1>
 </div>
 <div id="container">
+
 <!--Backgrounds-->
 <span id="ambaudio"></span>
 <a href="#a" onClick=playSound('audio/NorwichTown.wav')><img id="fire" src="img/fire_off.png" /></a>
 <a href="#b" onClick=playSound('audio/Train.wav')><img id="water" src="img/water_off.png" /></a>
 <a href="#c" onClick=playSound('audio/bass.wav')><img id="earth" src="img/earth_off.png" /></a>
 <a href="#a" onClick=playSound('audio/Wind.wav')><img id="air" src="img/air_off.png" /></a>
+
 <!--SoundSelectors-->
 <div id="soundselect">
+
 <!--Frame-->
 <div id="frame">
-<img id="frame1" src="img/frame.png" />
+<img id="frame1" src="img/frame_off.png" />
 </div>
+
 <!--Buttons-->
 <div id="1"><img id="img4-1" src="img/buttonblue_v2.png" alt="button" onMouseDown="buttonDepress('img4-1')" onMouseUp="soundsSelect('img4-1')" /></div>
 
@@ -50,6 +56,7 @@
 
 <!--End of Buttons-->
 </div>
+
 <div id="run">
             <form id="runForm" action="javascript:runLoop()">
             <div>
