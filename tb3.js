@@ -5,7 +5,7 @@ var url = "img/";
 function preloadImages() {
 	
 	var i1 = new Image();
-	i1.src = url+"buttonblue_depressed.png";
+	i1.src = url+"button_down.png";
 	var i2 = new Image();
 	i2.src = url+"button_on.png";
 	var i3 = new Image();
@@ -22,7 +22,7 @@ function preloadImages() {
 
 function buttonDepress (var1) {
 	
-	document.getElementById(var1).src = url+"buttonblue_depressed.png";
+	document.getElementById(var1).src = url+"button_down.png";
 	}
 
 var state4_1 = 0;
