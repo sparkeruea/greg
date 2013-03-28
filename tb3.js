@@ -9,15 +9,9 @@ function preloadImages() {
 	var i2 = new Image();
 	i2.src = url+"button_on.png";
 	var i3 = new Image();
-	i3.src = url+"button-on-orange.png";
+	i3.src = url+"run-deactivated.png";
 	var i4 = new Image();
-	i4.src = url+"button-on-red.png";
-	var i5 = new Image();
-	i5.src = url+"button-on-yellow.png";
-	var i6 = new Image();
-	i6.src = url+"light-on.png";
-	var i7 = new Image();
-	i7.src = url+"run-deactivated.png";
+	i4.src = url+"run-activated.png";
 	}
 
 function buttonDepress (var1) {
@@ -500,10 +494,10 @@ var interVal = "";
 
 function runLoop() {
 	
-	if ( document.getElementById("runButton").src == url+"http://pattern86.com/apps/sequencer-in-html5/images/run-deactivated.png" ) {
+	if ( document.getElementById("runButton").src == url+"run-deactivated.png" ) {
 		document.getElementById("tempoValue").disabled = true;
 		document.getElementById("tempoValue").style.color = "#777777";
-		document.getElementById("runButton").src = "http://pattern86.com/apps/sequencer-in-html5/images/run-activated.png";
+		document.getElementById("runButton").src = url+"run-activated.png";
 		setTimeout("singlePlay()" , 0 );
 		interVal = setInterval( "singlePlay()", tempo*16 );
 		}
@@ -511,7 +505,7 @@ function runLoop() {
 	else {
 		document.getElementById("tempoValue").disabled = false;
 		document.getElementById("tempoValue").style.color = "";
-		document.getElementById("runButton").src = "http://pattern86.com/apps/sequencer-in-html5/images/run-deactivated.png";
+		document.getElementById("runButton").src = url+"run-deactivated.png";
 		clearInterval(interVal);
 		}
 	}
