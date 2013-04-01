@@ -254,8 +254,8 @@ body {
 	}
 	
 #run {
-position: absolute;
-	left: 400px;
-	top: 30px;
+position: fixed;
+	left: 475px;
+	top: 12px;
 	z-index: 4;
 	}
