@@ -3,6 +3,8 @@
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background-color: #5D5D5D;
+	background-image: url('img/background4.png');
+	background-repeat: repeat;
 	color: #ffffff;
 	margin: 0;
 	padding: 0;
@@ -20,11 +22,53 @@ body {
 	}
 
 #banner h1 {
-	position: relative;
+	position: fixed;
 	left: 20px;
+	top: 0px;
+	height: 80px;
 	font-size: 44pt;
 	margin: 0px;
 	}
+
+#logo {
+	position: fixed;
+	height: 70px;
+	left: 465px;
+	top: 5px;
+	z-index: 3;
+}
+
+#soundcloud {
+	position: fixed;
+	left: 1000px;
+	top: 20px;
+	height: 40px;
+	z-index: 4;
+}
+
+#twitter {
+	position: fixed;
+	left: 1080px;
+	top: 20px;
+	height: 40px;
+	z-index: 4;
+}
+
+#activate {
+	position: fixed;
+	height: 50px;
+	left:700px;
+	top: 15px;
+	z-index: 4;
+}
+
+#deactivate {
+	position: fixed;
+	height: 50px;
+	top: 15px;
+	left: 770px;
+	z-index: 4;
+}
 
 #stopBG {
 	background-color: #ffffff;
@@ -254,8 +298,6 @@ body {
 	}
 	
 #run {
-position: fixed;
-	left: 475px;
-	top: 12px;
-	z-index: 4;
+	display: none;
 	}
+	

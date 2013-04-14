@@ -5,18 +5,16 @@ var url = "img/";
 function preloadImages() {
 	
 	var i1 = new Image();
-	i1.src = url+"button_down.png";
+	i1.src = url+"button_click.png";
 	var i2 = new Image();
 	i2.src = url+"button_on.png";
-	var i3 = new Image();
-	i3.src = url+"run-deactivated.png";
-	var i4 = new Image();
-	i4.src = url+"run-activated.png";
 	}
+
+//Change the Button Image on selection
 
 function buttonDepress (var1) {
 	
-	document.getElementById(var1).src = url+"button_down.png";
+	document.getElementById(var1).src = url+"button_click.png";
 	}
 
 var state4_1 = 0;
@@ -32,6 +30,7 @@ var state4_10 = 0;
 var state4_11 = 0;
 var state4_12 = 0;
 var state4_13 = 0;
+var state4_14 = 0;
 var state4_14 = 0;
 var state4_15 = 0;
 var state4_16 = 0;
@@ -49,6 +48,7 @@ var state3_10 = 0;
 var state3_11 = 0;
 var state3_12 = 0;
 var state3_13 = 0;
+var state3_14 = 0;
 var state3_14 = 0;
 var state3_15 = 0;
 var state3_16 = 0;
@@ -68,6 +68,7 @@ var state2_11 = 0;
 var state2_12 = 0;
 var state2_13 = 0;
 var state2_14 = 0;
+var state2_14 = 0;
 var state2_15 = 0;
 var state2_16 = 0;
 
@@ -84,6 +85,7 @@ var state1_10 = 0;
 var state1_11 = 0;
 var state1_12 = 0;
 var state1_13 = 0;
+var state1_14 = 0;
 var state1_14 = 0;
 var state1_15 = 0;
 var state1_16 = 0;
@@ -248,54 +250,18 @@ var s16p;
 var ch16p;
 var oh16p;
 
+//Define Tempo Value
+
 var tempo = 125;
+var tempo2 = 90;
+var tempo3 = 200;
 
-function numbersonly(e, decimal) {
-	
-	var key;
-	var keychar;
-	
-	if (window.event) {
-		key = window.event.keyCode;
-		}
-	
-	else if (e) {
-		key = e.which;
-		}
-	
-	else {
-		return true;
-		}
-	
-	keychar = String.fromCharCode(key);
-	
-	if ((key===null) || (key===0) || (key==8) ||  (key==9) || (key==13) || (key==27) ) {
-		return true;
-		}
-	
-	else if ((("0123456789").indexOf(keychar) > -1)) {
-		return true;
-		}
-	
-	else if (decimal && (keychar == ".")) {
-		return true;
-		}
-	
-	else {
-		return false;
-		}
-	}
-
-function tempoChange() {
-		
-		var tempoValue = parseInt(document.getElementById('tempoValue').value);
-		tempo = parseInt(60/tempoValue/4*1000);
-		}
+//SelectedButtonFunctionality
 
 function soundsSelect (var2) {
 	
 	if (var2 == "img4-1") {
-		if (state4_1 === 0) {
+		if (state4_1 == 0) {
 			document.getElementById(var2).src = url+"button_on.png";
 			state4_1 = 1;
 			oh1p = 'setTimeout( "oh1.play()", 0 )';
@@ -307,10 +273,10 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-2") {
-		if (state4_2 === 0) {
+		if (state4_2 == 0) {
 			document.getElementById(var2).src = url+"button_on.png";
 			state4_2 = 1;
-			oh2p = 'setTimeout( "oh2.play()", tempo )';
+			oh2p = 'setTimeout( "oh2.play()", tempo2 )';
 			}
 		else {
 			document.getElementById(var2).src = url+"buttonblue_v2.png";
@@ -319,10 +285,10 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-3") {
-		if (state4_3 === 0) {
+		if (state4_3 == 0) {
 			document.getElementById(var2).src = url+"button_on.png";
 			state4_3= 1;
-			oh3p = 'setTimeout( "oh3.play()", tempo*2 )';
+			oh3p = 'setTimeout( "oh3.play()", tempo3*2 )';
 			}
 		else {
 			document.getElementById(var2).src = url+"buttonblue_v2.png";
@@ -331,10 +297,10 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-4") {
-		if (state4_4 === 0) {
+		if (state4_4 == 0) {
 			document.getElementById(var2).src = url+"button_on.png";
 			state4_4 = 1;
-			oh4p = 'setTimeout( "oh4.play()", tempo*3 )';
+			oh4p = 'setTimeout( "oh4.play()", tempo3*3 )';
 			}
 		else {
 			document.getElementById(var2).src = url+"buttonblue_v2.png";
@@ -343,7 +309,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-5") {
-		if (state4_5 === 0) {
+		if (state4_5 == 0) {
 			document.getElementById(var2).src = url+"button_on.png";
 			state4_5 = 1;
 			oh5p = 'setTimeout( "oh5.play()", tempo*4 )';
@@ -355,10 +321,10 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-6") {
-		if (state4_6 === 0) {
+		if (state4_6 == 0) {
 			document.getElementById(var2).src = url+"button_on.png";
 			state4_6 = 1;
-			oh6p = 'setTimeout( "oh6.play()", tempo*5 )';
+			oh6p = 'setTimeout( "oh6.play()", tempo2*5 )';
 			}
 		else {
 			document.getElementById(var2).src = url+"buttonblue_v2.png";
@@ -367,10 +333,10 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-7") {
-		if (state4_7 === 0) {
+		if (state4_7 == 0) {
 			document.getElementById(var2).src = url+"button_on.png";
 			state4_7 = 1;
-			oh7p = 'setTimeout( "oh7.play()", tempo*6 )';
+			oh7p = 'setTimeout( "oh7.play()", tempo2*6 )';
 			}
 		else {
 			document.getElementById(var2).src = url+"buttonblue_v2.png";
@@ -379,7 +345,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-8") {
-		if (state4_8 === 0) {
+		if (state4_8 == 0) {
 			document.getElementById(var2).src = url+"button_on.png";
 			state4_8 = 1;
 			oh8p = 'setTimeout( "oh8.play()", tempo*7 )';
@@ -391,10 +357,10 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-9") {
-		if (state4_9 === 0) {
+		if (state4_9 == 0) {
 			document.getElementById(var2).src = url+"button_on.png";
 			state4_9 = 1;
-			oh9p = 'setTimeout( "oh9.play()", tempo*8 )';
+			oh9p = 'setTimeout( "oh9.play()", tempo3*8 )';
 			}
 		else {
 			document.getElementById(var2).src = url+"buttonblue_v2.png";
@@ -403,7 +369,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-10") {
-		if (state4_10 === 0) {
+		if (state4_10 == 0) {
 			document.getElementById(var2).src = url+"button_on.png";
 			state4_10 = 1;
 			oh10p = 'setTimeout( "oh10.play()", tempo*9 )';
@@ -415,10 +381,10 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-11") {
-		if (state4_11 === 0) {
+		if (state4_11 == 0) {
 			document.getElementById(var2).src = url+"button_on.png";
 			state4_11 = 1;
-			oh11p = 'setTimeout( "oh11.play()", tempo*10 )';
+			oh11p = 'setTimeout( "oh11.play()", tempo2*10 )';
 			}
 		else {
 			document.getElementById(var2).src = url+"buttonblue_v2.png";
@@ -427,10 +393,10 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-12") {
-		if (state4_12 === 0) {
+		if (state4_12 == 0) {
 			document.getElementById(var2).src = url+"button_on.png";
 			state4_12 = 1;
-			oh12p = 'setTimeout( "oh12.play()", tempo*11 )';
+			oh12p = 'setTimeout( "oh12.play()", tempo3*11 )';
 			}
 		else {
 			document.getElementById(var2).src = url+"buttonblue_v2.png";
@@ -439,10 +405,10 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-13") {
-		if (state4_13 === 0) {
+		if (state4_13 == 0) {
 			document.getElementById(var2).src = url+"button_on.png";
 			state4_13 = 1;
-			oh13p = 'setTimeout( "oh13.play()", tempo*12 )';
+			oh13p = 'setTimeout( "oh13.play()", tempo3*12 )';
 			}
 		else {
 			document.getElementById(var2).src = url+"buttonblue_v2.png";
@@ -451,10 +417,10 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-14") {
-		if (state4_14 === 0) {
+		if (state4_14 == 0) {
 			document.getElementById(var2).src = url+"button_on.png";
 			state4_14 = 1;
-			oh14p = 'setTimeout( "oh14.play()", tempo*13 )';
+			oh14p = 'setTimeout( "oh14.play()", tempo2*13 )';
 			}
 		else {
 			document.getElementById(var2).src = url+"buttonblue_v2.png";
@@ -463,7 +429,7 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-15") {
-		if (state4_15 === 0) {
+		if (state4_15 == 0) {
 			document.getElementById(var2).src = url+"button_on.png";
 			state4_15 = 1;
 			oh15p = 'setTimeout( "oh15.play()", tempo*14 )';
@@ -475,10 +441,10 @@ function soundsSelect (var2) {
 			}
 		}
 	else if (var2 == "img4-16") {
-		if (state4_16 === 0) {
+		if (state4_16 == 0) {
 			document.getElementById(var2).src = url+"button_on.png";
 			state4_16 = 1;
-			oh16p = 'setTimeout( "oh16.play()", tempo*15 )';
+			oh16p = 'setTimeout( "oh16.play()", tempo2*15 )';
 			}
 		else {
 			document.getElementById(var2).src = url+"buttonblue_v2.png";
@@ -492,23 +458,30 @@ function soundsSelect (var2) {
 
 var interVal = "";
 
-function runLoop() {
+
+//Activate and Deactivate Sounds
+
+function activateButton() {
 	
-	if ( document.getElementById("runButton").src == url+"run-deactivated.png" ) {
-		document.getElementById("tempoValue").disabled = true;
+	document.getElementById("runButton").src = "img/rungridactivated.png";
+	document.getElementById("tempoValue").disabled = true;
 		document.getElementById("tempoValue").style.color = "#777777";
-		document.getElementById("runButton").src = url+"run-activated.png";
 		setTimeout("singlePlay()" , 0 );
 		interVal = setInterval( "singlePlay()", tempo*16 );
-		}
-	
-	else {
-		document.getElementById("tempoValue").disabled = false;
-		document.getElementById("tempoValue").style.color = "";
-		document.getElementById("runButton").src = url+"run-deactivated.png";
-		clearInterval(interVal);
-		}
 	}
+
+//Stops BG and Sounds
+function stopButton() {
+	
+	document.getElementById("runButton").src = "";
+	document.getElementById("tempoValue").disabled = false;
+		document.getElementById("tempoValue").style.color = "";
+		clearInterval(interVal);
+	document.getElementById("ambaudio").innerHTML="<embed src='' autostart=true loop=false volume=0 hidden=true>";
+	return false;
+	}
+
+//Single Play Functionality
 
 function singlePlay() {
 	
@@ -592,14 +565,79 @@ function singlePlay() {
 	ch16 = document.getElementById('ch16');
 	oh16 = document.getElementById('oh16');
 	
-	setTimeout("document.getElementById('imgl-1').src = url+'light-on.png'", 0 );
-	setTimeout("document.getElementById('imgl-1').src = url+'light-off.png'", tempo );
-	setTimeout("document.getElementById('imgl-2').src = url+'light-on.png'", tempo );
-	setTimeout("document.getElementById('imgl-2').src = url+'light-off.png'", tempo*2 );
-	setTimeout("document.getElementById('imgl-3').src = url+'light-on.png'", tempo*2 );
-	setTimeout("document.getElementById('imgl-3').src = url+'light-off.png'", tempo*3 );
-	setTimeout("document.getElementById('imgl-4').src = url+'light-on.png'", tempo*3 );
-	setTimeout("document.getElementById('imgl-4').src = url+'light-off.png'", tempo*4 );
+	
+	eval(b1p);
+	eval(s1p);
+	eval(ch1p);
+	eval(oh1p);
+	eval(b2p);
+	eval(s2p);
+	eval(ch2p);
+	eval(oh2p);
+	eval(b3p);
+	eval(s3p);
+	eval(ch3p);
+	eval(oh3p);
+	eval(b4p);
+	eval(s4p);
+	eval(ch4p);
+	eval(oh4p);
+	eval(b5p);
+	eval(s5p);
+	eval(ch5p);
+	eval(oh5p);
+	eval(b6p);
+	eval(s6p);
+	eval(ch6p);
+	eval(oh6p);
+	eval(b7p);
+	eval(s7p);
+	eval(ch7p);
+	eval(oh7p);
+	eval(b8p);
+	eval(s8p);
+	eval(ch8p);
+	eval(oh8p);
+	eval(b9p);
+	eval(s9p);
+	eval(ch9p);
+	eval(oh9p);
+	eval(b10p);
+	eval(s10p);
+	eval(ch10p);
+	eval(oh10p);
+	eval(b11p);
+	eval(s11p);
+	eval(ch11p);
+	eval(oh11p);
+	eval(b12p);
+	eval(s12p);
+	eval(ch12p);
+	eval(oh12p);
+	eval(b13p);
+	eval(s13p);
+	eval(ch13p);
+	eval(oh13p);
+	eval(b14p);
+	eval(s14p);
+	eval(ch14p);
+	eval(oh14p);
+	eval(b15p);
+	eval(s15p);
+	eval(ch15p);
+	eval(oh15p);
+	eval(b16p);
+	eval(s16p);
+	eval(ch16p);
+	eval(oh16p);
+	}
+
+//Background Sounds
+	
+function playSound(soundfile) {
+  document.getElementById("ambaudio").innerHTML=
+    "<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+}setTimeout("document.getElementById('imgl-4').src = url+'light-off.png'", tempo*4 );
 	setTimeout("document.getElementById('imgl-5').src = url+'light-on.png'", tempo*4 );
 	setTimeout("document.getElementById('imgl-5').src = url+'light-off.png'", tempo*5 );
 	setTimeout("document.getElementById('imgl-6').src = url+'light-on.png'", tempo*5 );
